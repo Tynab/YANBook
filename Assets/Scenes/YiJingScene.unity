@@ -2566,7 +2566,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 12
         Type: 0
       Z:
         Raw: 0
@@ -2669,7 +2669,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -4232,7 +4232,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -4716,7 +4716,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 24
         Type: 0
       Z:
         Raw: 0
@@ -4819,7 +4819,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -5304,7 +5304,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 31.62
+        Raw: 35.620003
         Type: 0
       Z:
         Raw: 0
@@ -6287,7 +6287,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -9335,7 +9335,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 24
         Type: 0
       Z:
         Raw: 0
@@ -9438,7 +9438,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -11730,7 +11730,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 12
         Type: 0
       Z:
         Raw: 0
@@ -11833,7 +11833,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -12618,6 +12618,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9117b6d975111c47b064a4373cc67ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &528637558 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5760967405154365184, guid: 6c171bbb6a47c0045aac94494c48f719, type: 3}
+  m_PrefabInstance: {fileID: 37245915}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61088b824f1c2a148b4b56996ff56f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &557812807
@@ -14689,7 +14700,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 12
         Type: 0
       Z:
         Raw: 0
@@ -14792,7 +14803,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -15847,7 +15858,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -16331,7 +16342,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 12
         Type: 0
       Z:
         Raw: 0
@@ -16434,7 +16445,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -17451,6 +17462,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2905764967384224463, guid: 33994460efecd9d4794903c0f8d9a630, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 909886826}
     - targetCorrespondingSourceObject: {fileID: 2905764967356318473, guid: 33994460efecd9d4794903c0f8d9a630, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -17460,6 +17474,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2905764967384224458, guid: 33994460efecd9d4794903c0f8d9a630, type: 3}
   m_PrefabInstance: {fileID: 909886823}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &909886825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2905764967384224463, guid: 33994460efecd9d4794903c0f8d9a630, type: 3}
+  m_PrefabInstance: {fileID: 909886823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &909886826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909886825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8aedf3a2173a8640a610090312d826a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelLoader: {fileID: 2083574682}
+  Yao1Dropdown: {fileID: 0}
+  Yao2Dropdown: {fileID: 0}
+  Yao3Dropdown: {fileID: 0}
+  Yao4Dropdown: {fileID: 0}
+  Yao5Dropdown: {fileID: 0}
+  Yao6Dropdown: {fileID: 0}
+  TopicDropdown: {fileID: 528637558}
 --- !u!1 &909987970
 GameObject:
   m_ObjectHideFlags: 0
@@ -17819,7 +17858,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 24
         Type: 0
       Z:
         Raw: 0
@@ -17922,7 +17961,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -19537,7 +19576,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -19727,7 +19766,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 24
         Type: 0
       Z:
         Raw: 0
@@ -19830,7 +19869,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -21981,7 +22020,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 24
         Type: 0
       Z:
         Raw: 0
@@ -22084,7 +22123,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -24184,7 +24223,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 24
         Type: 0
       Z:
         Raw: 0
@@ -24287,7 +24326,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -27150,7 +27189,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -32638,7 +32677,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 24
         Type: 0
       Z:
         Raw: 0
@@ -32741,7 +32780,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -33916,7 +33955,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -34844,7 +34883,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 12
         Type: 0
       Z:
         Raw: 0
@@ -34947,7 +34986,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -35430,7 +35469,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 31.62
+        Raw: 35.620003
         Type: 0
       Z:
         Raw: 0
@@ -36018,7 +36057,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 24
         Type: 0
       Z:
         Raw: 0
@@ -36121,7 +36160,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -36708,7 +36747,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -37001,7 +37040,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -37191,7 +37230,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 12
         Type: 0
       Z:
         Raw: 0
@@ -37294,7 +37333,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -39322,7 +39361,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 12
         Type: 0
       Z:
         Raw: 0
@@ -39425,7 +39464,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -39909,7 +39948,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: 0
+        Raw: 12
         Type: 0
       Z:
         Raw: 0
@@ -40012,7 +40051,7 @@ MonoBehaviour:
         Max: Infinity
     Alignment:
       X: -1
-      Y: -1
+      Y: 1
       Z: 0
     AutoSize:
       X: 1
@@ -40136,6 +40175,74 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9117b6d975111c47b064a4373cc67ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &2083574681
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 715154326487555030, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866571233358479052, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866571233358479052, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866571233358479052, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866571233358479052, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866571233358479052, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866571233358479052, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866571233358479052, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866571233358479052, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866571233358479052, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866571233358479052, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+--- !u!114 &2083574682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9084959863562940188, guid: 25a484485b3a16a419f37707f12ad16c, type: 3}
+  m_PrefabInstance: {fileID: 2083574681}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9239bd01df0bdd42b6180d5495184b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2142264360
@@ -40436,6 +40543,7 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2083574681}
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
