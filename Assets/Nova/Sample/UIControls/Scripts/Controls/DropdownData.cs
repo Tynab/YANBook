@@ -1,5 +1,7 @@
+using Nova;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace NovaSamples.UIControls
 {
@@ -9,6 +11,10 @@ namespace NovaSamples.UIControls
     [Serializable]
     public class DropdownData
     {
+        [Header("Collapsed Visuals")]
+        [Tooltip("The TextBlock to display the label of currently selected option.")]
+        public TextBlock SelectionLabel = null;
+
         public const string NothingSelected = "None";
 
         /// <summary>
@@ -32,7 +38,7 @@ namespace NovaSamples.UIControls
                 {
                     // If the dropdown doesn't have any options or the
                     // SelectedIndex is out of range, indicate nothing selected.
-                    return NothingSelected;
+                    return SelectionLabel == null ? NothingSelected : SelectionLabel.Text;
                 }
 
                 // Return the selected option

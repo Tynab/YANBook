@@ -1,6 +1,7 @@
 using NovaSamples.UIControls;
 using UnityEngine;
 using static UnityEngine.Debug;
+using static Utilities;
 
 [RequireComponent(typeof(Button))]
 public class ResultButton : MonoBehaviour
@@ -41,13 +42,13 @@ public class ResultButton : MonoBehaviour
 
     private bool _isTransitioning = false;
 
-    private string _selectedYao1 = "Lão Dương";
-    private string _selectedYao2 = "Lão Dương";
-    private string _selectedYao3 = "Lão Dương";
-    private string _selectedYao4 = "Lão Dương";
-    private string _selectedYao5 = "Lão Dương";
-    private string _selectedYao6 = "Lão Dương";
-    private string _selectedTopic = "Ước muốn";
+    private string _selectedYao1 = string.Empty;
+    private string _selectedYao2 = string.Empty;
+    private string _selectedYao3 = string.Empty;
+    private string _selectedYao4 = string.Empty;
+    private string _selectedYao5 = string.Empty;
+    private string _selectedYao6 = string.Empty;
+    private string _selectedTopic = string.Empty;
 
     void Start()
     {
@@ -144,19 +145,54 @@ public class ResultButton : MonoBehaviour
         }
     }
 
-    private void OnYao1DropdownValueChanged(string selectedValue) => _selectedYao1 = selectedValue;
+    private void OnYao1DropdownValueChanged(string selectedValue)
+    {
+        _selectedYao1 = selectedValue;
 
-    private void OnYao2DropdownValueChanged(string selectedValue) => _selectedYao2 = selectedValue;
+        YiJingCalculate();
+    }
 
-    private void OnYao3DropdownValueChanged(string selectedValue) => _selectedYao3 = selectedValue;
+    private void OnYao2DropdownValueChanged(string selectedValue)
+    {
+        _selectedYao2 = selectedValue;
 
-    private void OnYao4DropdownValueChanged(string selectedValue) => _selectedYao4 = selectedValue;
+        YiJingCalculate();
+    }
 
-    private void OnYao5DropdownValueChanged(string selectedValue) => _selectedYao5 = selectedValue;
+    private void OnYao3DropdownValueChanged(string selectedValue)
+    {
+        _selectedYao3 = selectedValue;
 
-    private void OnYao6DropdownValueChanged(string selectedValue) => _selectedYao6 = selectedValue;
+        YiJingCalculate();
+    }
 
-    private void OnTopicDropdownValueChanged(string selectedValue) => _selectedTopic = selectedValue;
+    private void OnYao4DropdownValueChanged(string selectedValue)
+    {
+        _selectedYao4 = selectedValue;
+
+        YiJingCalculate();
+    }
+
+    private void OnYao5DropdownValueChanged(string selectedValue)
+    {
+        _selectedYao5 = selectedValue;
+
+        YiJingCalculate();
+    }
+
+    private void OnYao6DropdownValueChanged(string selectedValue)
+    {
+        _selectedYao6 = selectedValue;
+
+        YiJingCalculate();
+    }
+
+    private void OnTopicDropdownValueChanged(string selectedValue)
+    {
+        _selectedTopic = selectedValue;
+
+        YiJingCalculate();
+    }
 
     private void OnResultButtonClicked()
     {
@@ -168,5 +204,89 @@ public class ResultButton : MonoBehaviour
 
             _ = StartCoroutine(LevelLoader.LoadSceneWithAnimation(targetSceneName));
         }
+    }
+
+    private void YiJingCalculate()
+    {
+        if (string.IsNullOrWhiteSpace(_selectedYao1))
+        {
+            LogWarning("ResultButton: Chưa chọn Hào Sơ!");
+
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(_selectedYao2))
+        {
+            LogWarning("ResultButton: Chưa chọn Hào Nhị!");
+
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(_selectedYao3))
+        {
+            LogWarning("ResultButton: Chưa chọn Hào Tam!");
+
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(_selectedYao4))
+        {
+            LogWarning("ResultButton: Chưa chọn Hào Tứ!");
+
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(_selectedYao5))
+        {
+            LogWarning("ResultButton: Chưa chọn Hào Ngũ!");
+
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(_selectedYao6))
+        {
+            LogWarning("ResultButton: Chưa chọn Hào Thượng!");
+
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(_selectedTopic))
+        {
+            LogWarning("ResultButton: Chưa chọn chủ đề!");
+
+            return;
+        }
+
+        var yaos = (_selectedYao1, _selectedYao2, _selectedYao3, _selectedYao4, _selectedYao5, _selectedYao6).ToYaos();
+
+        // Quẻ Chủ
+
+        var benGua = yaos.ToGua();
+
+        Log($"Quẻ Chủ: {benGua}");
+
+        // Quẻ Biến
+
+        if (HasLao(_selectedYao1, _selectedYao2, _selectedYao3, _selectedYao4, _selectedYao5, _selectedYao6))
+        {
+            var bianYaos = (_selectedYao1, _selectedYao2, _selectedYao3, _selectedYao4, _selectedYao5, _selectedYao6).ToBianYaos();
+            var bianGua = bianYaos.ToGua();
+
+            Log($"Quẻ Biến: {bianGua}");
+        }
+
+        // Quẻ Hỗ
+
+        var huYaos = (_selectedYao2, _selectedYao3, _selectedYao4, _selectedYao3, _selectedYao4, _selectedYao5).ToYaos();
+        var huGua = huYaos.ToGua();
+
+        Log($"Quẻ Hỗ: {huGua}");
+
+        // Quẻ Sai
+
+        var cuoYaos = yaos.ToCuoYaos();
+        var cuoGua = cuoYaos.ToGua();
+
+        Log($"Quẻ Sai: {cuoGua}");
     }
 }

@@ -1,3 +1,5 @@
+using System.Linq;
+
 public static class Utilities
 {
     public static EYao ToYao(this string yao) => yao switch
@@ -9,16 +11,58 @@ public static class Utilities
         _ => EYao.None
     };
 
+    public static EYao ToBianYao(this string yao) => yao switch
+    {
+        "Lão Dương" => EYao.Ying,
+        "Lão Âm" => EYao.Yang,
+        "Thiếu Dương" => EYao.Yang,
+        "Thiếu Âm" => EYao.Ying,
+        _ => EYao.None
+    };
+
+    public static EYao ToCuoYao(this EYao yao) => yao switch
+    {
+        EYao.Yang => EYao.Ying,
+        EYao.Ying => EYao.Yang,
+        _ => EYao.None
+    };
+
+    public static EYao[] ToYaos(this (string Yao1, string Yao2, string Yao3, string Yao4, string Yao5, string Yao6) yaoTuple) => new[]
+    {
+        yaoTuple.Yao1.ToYao(),
+        yaoTuple.Yao2.ToYao(),
+        yaoTuple.Yao3.ToYao(),
+        yaoTuple.Yao4.ToYao(),
+        yaoTuple.Yao5.ToYao(),
+        yaoTuple.Yao6.ToYao()
+    };
+
+    public static EYao[] ToBianYaos(this (string Yao1, string Yao2, string Yao3, string Yao4, string Yao5, string Yao6) yaoTuple) => new[]
+    {
+        yaoTuple.Yao1.ToBianYao(),
+        yaoTuple.Yao2.ToBianYao(),
+        yaoTuple.Yao3.ToBianYao(),
+        yaoTuple.Yao4.ToBianYao(),
+        yaoTuple.Yao5.ToBianYao(),
+        yaoTuple.Yao6.ToBianYao()
+    };
+
+    public static EYao[] ToCuoYaos(this EYao[] benYaos) => benYaos.Select(x => x.ToCuoYao()).ToArray();
+
+    public static bool IsLao(this string yao) => yao is "Lão Dương" or "Lão Âm";
+
+    public static bool HasLao(params string[] yaos) => yaos.Any(x => x.IsLao());
+
     public static EGong ToGong(this (EYao Xia, EYao Zhong, EYao Shang) yaoTuple) => yaoTuple switch
     {
         (EYao.Yang, EYao.Yang, EYao.Yang) => EGong.Quian,
-        (EYao.Ying, EYao.Ying, EYao.Ying) => EGong.Dui,
-        (EYao.Ying, EYao.Yang, EYao.Ying) => EGong.Li,
+        (EYao.Yang, EYao.Yang, EYao.Ying) => EGong.Dui,
+        (EYao.Yang, EYao.Ying, EYao.Yang) => EGong.Li,
         (EYao.Ying, EYao.Yang, EYao.Yang) => EGong.Xun,
-        (EYao.Yang, EYao.Ying, EYao.Yang) => EGong.Zhen,
-        (EYao.Yang, EYao.Ying, EYao.Ying) => EGong.Kan,
-        (EYao.Yang, EYao.Yang, EYao.Ying) => EGong.Gen,
-        (EYao.Ying, EYao.Ying, EYao.Yang) => EGong.Kun,
+        (EYao.Yang, EYao.Ying, EYao.Ying) => EGong.Zhen,
+        (EYao.Ying, EYao.Yang, EYao.Ying) => EGong.Kan,
+        (EYao.Ying, EYao.Ying, EYao.Yang) => EGong.Gen,
+        (EYao.Ying, EYao.Ying, EYao.Ying) => EGong.Kun,
         _ => EGong.None
     };
 
@@ -90,4 +134,6 @@ public static class Utilities
         (EGong.Kan, EGong.Li) => 64,
         _ => 0
     };
+
+    public static int ToGua(this EYao[] yaos) => ((yaos[0], yaos[1], yaos[2]).ToGong(), (yaos[3], yaos[4], yaos[5]).ToGong()).ToGua();
 }
