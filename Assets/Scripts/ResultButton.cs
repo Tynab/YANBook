@@ -1,5 +1,6 @@
 using NovaSamples.UIControls;
 using UnityEngine;
+using static Nova.AutoSize;
 using static UnityEngine.Debug;
 using static Utilities;
 
@@ -37,6 +38,22 @@ public class ResultButton : MonoBehaviour
     [Header("Topic Dropdown")]
     [Tooltip("Reference đến Nova Dropdown chứa danh sách chủ đề")]
     public Dropdown TopicDropdown;
+
+    [Header("GuaCell Ben (Quẻ Chủ)")]
+    [Tooltip("Reference đến GuaCell component của Quẻ Chủ")]
+    public GuaCell GuaCellBen;
+
+    [Header("GuaCell Bian (Quẻ Biến)")]
+    [Tooltip("Reference đến GuaCell component của Quẻ Biến")]
+    public GuaCell GuaCellBian;
+
+    [Header("GuaCell Hu (Quẻ Hỗ)")]
+    [Tooltip("Reference đến GuaCell component của Quẻ Hỗ")]
+    public GuaCell GuaCellHu;
+
+    [Header("GuaCell Cuo (Quẻ Sai)")]
+    [Tooltip("Reference đến GuaCell component của Quẻ Sai")]
+    public GuaCell GuaCellCuo;
 
     private Button _button;
 
@@ -137,6 +154,36 @@ public class ResultButton : MonoBehaviour
         if (_button != null)
         {
             _button.OnClicked.RemoveListener(OnResultButtonClicked);
+        }
+
+        if (Yao1Dropdown != null)
+        {
+            Yao1Dropdown.OnValueChanged.RemoveListener(OnYao1DropdownValueChanged);
+        }
+
+        if (Yao2Dropdown != null)
+        {
+            Yao2Dropdown.OnValueChanged.RemoveListener(OnYao2DropdownValueChanged);
+        }
+
+        if (Yao3Dropdown != null)
+        {
+            Yao3Dropdown.OnValueChanged.RemoveListener(OnYao3DropdownValueChanged);
+        }
+
+        if (Yao4Dropdown != null)
+        {
+            Yao4Dropdown.OnValueChanged.RemoveListener(OnYao4DropdownValueChanged);
+        }
+
+        if (Yao5Dropdown != null)
+        {
+            Yao5Dropdown.OnValueChanged.RemoveListener(OnYao5DropdownValueChanged);
+        }
+
+        if (Yao6Dropdown != null)
+        {
+            Yao6Dropdown.OnValueChanged.RemoveListener(OnYao6DropdownValueChanged);
         }
 
         if (TopicDropdown != null)
@@ -258,12 +305,7 @@ public class ResultButton : MonoBehaviour
         }
 
         var yaos = (_selectedYao1, _selectedYao2, _selectedYao3, _selectedYao4, _selectedYao5, _selectedYao6).ToYaos();
-
-        // Quẻ Chủ
-
-        var benGua = yaos.ToGua();
-
-        Log($"Quẻ Chủ: {benGua}");
+        var guaBen = "QUẺ CHỦ";
 
         // Quẻ Biến
 
@@ -272,7 +314,42 @@ public class ResultButton : MonoBehaviour
             var bianYaos = (_selectedYao1, _selectedYao2, _selectedYao3, _selectedYao4, _selectedYao5, _selectedYao6).ToBianYaos();
             var bianGua = bianYaos.ToGua();
 
-            Log($"Quẻ Biến: {bianGua}");
+            if (GuaCellBian != null)
+            {
+                GuaCellBian.GuaNumber = bianGua;
+                GuaCellBian.ApplyGuaCell();
+                GuaCellBian.gameObject.SetActive(true);
+            }
+        }
+        else if (GuaCellBian != null)
+        {
+            GuaCellBian.GuaNumber = 0;
+            GuaCellBian.ApplyGuaCell();
+            GuaCellBian.gameObject.SetActive(false);
+
+            guaBen = "QUẺ TĨNH";
+        }
+
+        // Quẻ Chủ
+
+        var benGua = yaos.ToGua();
+
+        if (GuaCellBen != null)
+        {
+            GuaCellBen.GuaNumber = benGua;
+            GuaCellBen.ApplyGuaCell(guaBen);
+        }
+
+        var guaCellBen2D = GuaCellBen.GetComponent<Nova.UIBlock2D>();
+
+        if (guaBen == "QUẺ CHỦ")
+        {
+            guaCellBen2D.AutoSize.X = Expand;
+        }
+        else
+        {
+            guaCellBen2D.AutoSize.X = None;
+            guaCellBen2D.Size.X.Percent = .5f;
         }
 
         // Quẻ Hỗ
@@ -280,13 +357,21 @@ public class ResultButton : MonoBehaviour
         var huYaos = (_selectedYao2, _selectedYao3, _selectedYao4, _selectedYao3, _selectedYao4, _selectedYao5).ToYaos();
         var huGua = huYaos.ToGua();
 
-        Log($"Quẻ Hỗ: {huGua}");
+        if (GuaCellHu != null)
+        {
+            GuaCellHu.GuaNumber = huGua;
+            GuaCellHu.ApplyGuaCell();
+        }
 
         // Quẻ Sai
 
         var cuoYaos = yaos.ToCuoYaos();
         var cuoGua = cuoYaos.ToGua();
 
-        Log($"Quẻ Sai: {cuoGua}");
+        if (GuaCellCuo != null)
+        {
+            GuaCellCuo.GuaNumber = cuoGua;
+            GuaCellCuo.ApplyGuaCell();
+        }
     }
 }

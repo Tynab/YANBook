@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3446196840067612753}
   - component: {fileID: 7389003985609532776}
   - component: {fileID: 6601111654544756857}
+  - component: {fileID: 6354318963597177224}
   m_Layer: 0
   m_Name: Gong
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6957226215189400282}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 18, z: 0}
+  m_LocalPosition: {x: 0, y: -15, z: 0}
   m_LocalScale: {x: 0.9999684, y: 0.9999684, z: 0.9999684}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -225,7 +226,7 @@ MonoBehaviour:
     LightingModel: 0
     ShadowCastingMode: 2
     ReceiveShadows: 1
-  PreviewSize: {x: 1, y: 1, z: 0}
+  PreviewSize: {x: 1, y: 30, z: 0}
   visuals:
     Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     CornerRadius:
@@ -295,6 +296,22 @@ MonoBehaviour:
     FillEnabled: 0
   texture: {fileID: 0}
   sprite: {fileID: 0}
+--- !u!114 &6354318963597177224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6957226215189400282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e6b649cbeb883469cd06ae3062e102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GongType: 0
+  YaoXia: {fileID: 1531535344977672336}
+  YaoZhong: {fileID: 7793702787110417122}
+  YaoShang: {fileID: 6199241729322000851}
 --- !u!1001 &2196053355421923754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -305,7 +322,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4413113688917444403, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
       propertyPath: m_Name
-      value: Yao 1
+      value: Yao Xia
       objectReference: {fileID: 0}
     - target: {fileID: 5530706872500291081, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -352,6 +369,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
+--- !u!114 &1531535344977672336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 808653058524512570, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
+  m_PrefabInstance: {fileID: 2196053355421923754}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7612a577a8cced7429d2af8a66596e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5960785122508373923 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5530706872500291081, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
@@ -367,7 +395,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4413113688917444403, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
       propertyPath: m_Name
-      value: Yao 3
+      value: Yao Shang
       objectReference: {fileID: 0}
     - target: {fileID: 5530706872500291081, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -423,6 +451,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5530706872500291081, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
   m_PrefabInstance: {fileID: 6715087144754815209}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6199241729322000851 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 808653058524512570, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
+  m_PrefabInstance: {fileID: 6715087144754815209}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7612a577a8cced7429d2af8a66596e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7426474029085832152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -433,7 +472,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4413113688917444403, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
       propertyPath: m_Name
-      value: Yao 2
+      value: Yao Zhong
       objectReference: {fileID: 0}
     - target: {fileID: 5530706872500291081, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -489,3 +528,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5530706872500291081, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
   m_PrefabInstance: {fileID: 7426474029085832152}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7793702787110417122 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 808653058524512570, guid: 01abac4313cae644cb9cc559b8fe7a2c, type: 3}
+  m_PrefabInstance: {fileID: 7426474029085832152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7612a577a8cced7429d2af8a66596e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

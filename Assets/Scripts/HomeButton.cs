@@ -41,7 +41,7 @@ public class HomeButton : MonoBehaviour
 
     private void OnHomeButtonClicked()
     {
-        if (!_isTransitioning && LevelLoader != null)
+        if (!_isTransitioning)
         {
             const string targetSceneName = "YiJingScene";
 

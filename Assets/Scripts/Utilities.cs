@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 
 public static class Utilities
@@ -136,4 +137,72 @@ public static class Utilities
     };
 
     public static int ToGua(this EYao[] yaos) => ((yaos[0], yaos[1], yaos[2]).ToGong(), (yaos[3], yaos[4], yaos[5]).ToGong()).ToGua();
+
+    public static readonly Dictionary<int, string> GuaName = new()
+    {
+        { 1, "Càn" },
+        { 2, "Khôn" },
+        { 3, "Truân" },
+        { 4, "Mông" },
+        { 5, "Nhu" },
+        { 6, "Tụng" },
+        { 7, "Sư" },
+        { 8, "Tỷ" },
+        { 9, "Tiểu Súc" },
+        { 10, "Lý" },
+        { 11, "Thái" },
+        { 12, "Bĩ" },
+        { 13, "Đồng Nhân" },
+        { 14, "Đại Hữu" },
+        { 15, "Khiêm" },
+        { 16, "Dự" },
+        { 17, "Tùy" },
+        { 18, "Cổ" },
+        { 19, "Lâm" },
+        { 20, "Quán" },
+        { 21, "Phệ Hạp" },
+        { 22, "Bí" },
+        { 23, "Bác" },
+        { 24, "Phục" },
+        { 25, "Vô Vọng" },
+        { 26, "Đại Súc"},
+        { 27, "Di"},
+        { 28, "Đại Quá"},
+        { 29, "Khảm"},
+        { 30, "Ly"},
+        { 31, "Hàm"},
+        { 32, "Hằng"},
+        { 33, "Độn"},
+        { 34, "Đại Tráng"},
+        { 35, "Tấn"},
+        { 36, "Minh Di"},
+        { 37, "Gia Nhân"},
+        { 38, "Khuê"},
+        { 39, "Kiển"},
+        { 40, "Giải"},
+        { 41, "Tổn"},
+        { 42, "Ích"},
+        { 43, "Quải"},
+        { 44, "Cấu"},
+        { 45, "Tụy"},
+        { 46, "Thăng"},
+        { 47, "Khốn"},
+        { 48, "Tỉnh"},
+        { 49, "Cách"},
+        { 50, "Đỉnh"},
+        { 51, "Chấn"},
+        { 52, "Cấn"},
+        { 53, "Tiệm"},
+        { 54, "Qui Muội"},
+        { 55, "Phong"},
+        { 56, "Lữ"},
+        { 57, "Tốn"},
+        { 58, "Đoài"},
+        { 59, "Hoán"},
+        { 60, "Tiết"},
+        { 61, "Trung Phu"},
+        { 62, "Tiểu Quá"},
+        { 63, "Ký Tế"},
+        { 64, "Vị Tế"}
+    };
 }

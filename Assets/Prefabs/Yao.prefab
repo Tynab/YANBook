@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5530706872500291081}
   - component: {fileID: 3889628675990407743}
   - component: {fileID: 8085630325427842224}
+  - component: {fileID: 808653058524512570}
   m_Layer: 0
   m_Name: Yao
   m_TagString: Untagged
@@ -293,6 +294,20 @@ MonoBehaviour:
     FillEnabled: 1
   texture: {fileID: 0}
   sprite: {fileID: 0}
+--- !u!114 &808653058524512570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4413113688917444403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7612a577a8cced7429d2af8a66596e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YaoType: 0
+  PanelLine: {fileID: 4713621928882984917}
 --- !u!1 &7259643481367807186
 GameObject:
   m_ObjectHideFlags: 0
